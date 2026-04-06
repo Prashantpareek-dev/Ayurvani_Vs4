@@ -8,9 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="./Image/Hook.avif" fetchpriority="high">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Hind:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Hind:wght@400;500;600;700&display=optional"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Hind:wght@400;500;600;700&display=optional"
+      rel="stylesheet">
+  </noscript>
   <style>
     :root {
       --lb: #D6EAF8;
@@ -36,6 +41,7 @@
       display: flex;
       justify-content: center;
       min-height: 100vh;
+      padding-bottom: 92px;
     }
 
     .page {
@@ -275,11 +281,6 @@
     section {
       padding: 50px 20px;
       position: relative;
-    }
-
-    section:not(.hook) {
-      content-visibility: auto;
-      contain-intrinsic-size: 1px 900px;
     }
 
     .section-label {
@@ -1510,7 +1511,7 @@
     .footer-cta {
       position: fixed;
       bottom: 0;
-      width: 450px;
+      width: min(450px, calc(100vw - 16px));
       left: 50%;
       transform: translateX(-50%);
       background: var(--dark);
@@ -1534,18 +1535,6 @@
       transition: transform .2s;
       position: relative;
       overflow: hidden;
-    }
-
-    .footer-cta a::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -100%;
-      width: 60px;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.15);
-      transform: skewX(-20deg);
-      animation: shimmer 2s ease infinite;
     }
 
     .footer-cta a:hover {
@@ -1590,7 +1579,7 @@
 
     <!-- ═══════ HOOK ═══════ -->
     <section class="hook">
-      <img src="./Image/Hook.avif" style="width: 100%;height: 100%;" alt="AyurVani Capsules" loading="eager" fetchpriority="high" decoding="async">
+      <img src="./Image/Hook.avif" style="width: 100%;height: 100%;" alt="AyurVani Capsules" width="450" height="450" loading="eager" fetchpriority="high" decoding="async">
     </section>
 
     <!-- ═══════ PAIN ═══════ -->
@@ -1601,7 +1590,7 @@
       <div class="pain-grid">
         <div class="pain-card">
           <div class="pain-img">
-            <img src="./Image/Pain5.avif" alt="Stammering" loading="lazy" decoding="async">
+            <img src="./Image/Pain5.avif" srcset="./Image/260/Pain5.avif 260w, ./Image/360/Pain5.avif 360w, ./Image/Pain5.avif 375w" alt="Stammering" width="375" height="450" sizes="180px" loading="lazy" decoding="async">
           </div>
           <div class="pain-text">
             <h3>बोलते समय अटकना</h3>
@@ -1610,7 +1599,7 @@
         </div>
         <div class="pain-card">
           <div class="pain-img">
-            <img src="./Image/Pain8.avif" alt="People laughing" loading="lazy" decoding="async">
+            <img src="./Image/Pain8.avif" srcset="./Image/260/Pain8.avif 260w, ./Image/360/Pain8.avif 360w, ./Image/Pain8.avif 429w" alt="People laughing" width="429" height="450" sizes="180px" loading="lazy" decoding="async">
           </div>
           <div class="pain-text">
             <h3>लोग हँसते हैं या बात काटते हैं</h3>
@@ -1619,7 +1608,7 @@
         </div>
         <div class="pain-card">
           <div class="pain-img">
-            <img src="./Image/Pain7.avif" alt="Interview fear" loading="lazy" decoding="async">
+            <img src="./Image/Pain7.avif" srcset="./Image/260/Pain7.avif 260w, ./Image/360/Pain7.avif 360w, ./Image/Pain7.avif 429w" alt="Interview fear" width="429" height="450" sizes="180px" loading="lazy" decoding="async">
           </div>
           <div class="pain-text">
             <h3>Interview में डर</h3>
@@ -1628,7 +1617,7 @@
         </div>
         <div class="pain-card">
           <div class="pain-img">
-            <img src="./Image/Pain6.avif" alt="Stress frustration" loading="lazy" decoding="async">
+            <img src="./Image/Pain6.avif" srcset="./Image/260/Pain6.avif 260w, ./Image/360/Pain6.avif 360w, ./Image/Pain6.avif 429w" alt="Stress frustration" width="429" height="450" sizes="180px" loading="lazy" decoding="async">
           </div>
           <div class="pain-text">
             <h3>Frustration & Stress</h3>
@@ -1642,22 +1631,22 @@
         <div class="cause-list">
           <div class="cause-item">
             <div class="cause-icon">
-              <img src="./Image/Pain4.avif" alt="" loading="lazy" decoding="async">
+              <img src="./Image/Pain4.avif" srcset="./Image/260/Pain4.avif 260w, ./Image/360/Pain4.avif 360w, ./Image/Pain4.avif 450w" alt="" width="450" height="450" sizes="130px" loading="lazy" decoding="async">
             </div> Mind का Imbalance / Overthinking
           </div>
           <div class="cause-item">
             <div class="cause-icon">
-              <img src="./Image/Pain3.avif" alt="" loading="lazy" decoding="async">
+              <img src="./Image/Pain3.avif" srcset="./Image/260/Pain3.avif 260w, ./Image/360/Pain3.avif 360w, ./Image/Pain3.avif 450w" alt="" width="450" height="450" sizes="130px" loading="lazy" decoding="async">
             </div> Anxiety और Fear
           </div>
           <div class="cause-item">
             <div class="cause-icon">
-              <img src="./Image/Pain2.avif" alt="" loading="lazy" decoding="async">
+              <img src="./Image/Pain2.avif" srcset="./Image/260/Pain2.avif 260w, ./Image/360/Pain2.avif 360w, ./Image/Pain2.avif 450w" alt="" width="450" height="450" sizes="130px" loading="lazy" decoding="async">
             </div> Weak Speech Coordination
           </div>
           <div class="cause-item">
             <div class="cause-icon">
-              <img src="./Image/Pain1.avif" alt="" loading="lazy" decoding="async">
+              <img src="./Image/Pain1.avif" srcset="./Image/260/Pain1.avif 260w, ./Image/360/Pain1.avif 360w, ./Image/Pain1.avif 450w" alt="" width="450" height="450" sizes="130px" loading="lazy" decoding="async">
             </div> कम Practice और Confidence
           </div>
         </div>
@@ -2115,6 +2104,14 @@
     }, { threshold: 0.1 });
 
     reveals.forEach(r => obs.observe(r));
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(error => {
+          console.error('Service worker registration failed:', error);
+        });
+      });
+    }
   </script>
 </body>
 
